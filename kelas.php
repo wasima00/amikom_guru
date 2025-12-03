@@ -39,10 +39,9 @@ while ($tiap = $ambil->fetch_assoc()) {
                 </thead>
                 <tbody>
                     <?php foreach ($kelas as $key => $value):
-                         ?>
-
+                    ?>
                         <tr>
-                            <td><?php echo $key+1; ?></td>
+                            <td><?php echo $key + 1; ?></td>
                             <td><?php echo $value["kode_kelas"]; ?></td>
                             <td><?php echo $value["nama_mapel"]; ?></td>
                             <td><?php echo $value["nik_guru"]; ?></td>
@@ -50,8 +49,8 @@ while ($tiap = $ambil->fetch_assoc()) {
                             <td><?php echo $value["tahun_ajaran"]; ?></td>
                             <td><?php echo $value["semester"]; ?></td>
                             <td>
-                                <a href="" class = "btn btn-info btn-sm">Peserta</a>
-                                 <a href="" class = "btn btn-success btn-sm">Rekap Presensi</a>
+                                <a href="peserta.php?id_kelas=<?php echo $value["ID_kelas"]; ?>" class="btn btn-info btn-sm">Peserta</a>
+                                <a href="" class="btn btn-success btn-sm">Rekap Presensi</a>
                             </td>
                         </tr>
                     <?php endforeach ?>
